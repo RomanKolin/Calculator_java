@@ -482,7 +482,15 @@ public class MainActivity extends AppCompatActivity
                     editTextNumberDecimal1firstnum.setHint("0");
                     editTextNumberDecimal4secondnum.setGravity(Gravity.START);
                     editTextNumberDecimal4secondnum.setHint("0");
-                    editTextNumberDecimal1firstnum.setFocusable(true);
+                    if (editTextNumberDecimal1firstnum.getText().toString().length() > 0)
+                    {
+                        editTextNumberDecimal1firstnum.setFocusable(false);
+                        editTextNumberDecimal4secondnum.setFocusable(true);
+                    }
+                    else
+                    {
+                        editTextNumberDecimal1firstnum.setFocusable(true);
+                    }
                     break;
                 case R.id.button21ndegree:
                     LinearLayout.LayoutParams weigoperanumndegree = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0);
@@ -602,7 +610,15 @@ public class MainActivity extends AppCompatActivity
                     editTextNumberDecimal3beforeoperation.setText(R.string.button34arccot);
                     break;
             }
-            editTextNumberDecimal1firstnum.setFocusable(true);
+            if (editTextNumberDecimal1firstnum.getText().toString().length() > 0)
+            {
+                editTextNumberDecimal1firstnum.setFocusable(false);
+                editTextNumberDecimal4secondnum.setFocusable(true);
+            }
+            else
+            {
+                editTextNumberDecimal1firstnum.setFocusable(true);
+            }
         }
 
         editTextNumberDecimal3beforeoperation.setFocusableInTouchMode(true);
