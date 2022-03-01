@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity
     public void onclicknumber(View number)
     {
         editTextNumberDecimal1firstnum.setHint("");
+        textView5plusminus.setText("");
 
         if (editTextNumberDecimal1firstnum.hasFocusable())
         {
@@ -927,6 +928,11 @@ public class MainActivity extends AppCompatActivity
                             else
                             {
                                 res = Math.sqrt(a);
+                                textView5plusminus.setText("±");
+                                LinearLayout.LayoutParams weigfnumplusminus = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                                editTextNumberDecimal1firstnum.setLayoutParams(weigfnumplusminus);
+                                LinearLayout.LayoutParams weigplusminus = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+                                textView5plusminus.setLayoutParams(weigplusminus);
                             }
                             break;
                         case "lg":
@@ -1015,7 +1021,7 @@ public class MainActivity extends AppCompatActivity
                 double res = Double.parseDouble(editTextNumberDecimal1firstnum.getText().toString());
                 editTextNumberDecimal1firstnum.setText(String.valueOf(res));
                 char[] zero = editTextNumberDecimal1firstnum.getText().toString().toCharArray();
-                if (zero[zero.length - 1] == '0' && zero[zero.length - 1] == '0')
+                if (zero[zero.length - 1] == '0' && zero[zero.length - 2] == '.')
                 {
                     editTextNumberDecimal1firstnum.setText(editTextNumberDecimal1firstnum.getText().toString().replace(".0", ""));
                 }
