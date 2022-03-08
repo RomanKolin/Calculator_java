@@ -1,7 +1,7 @@
 # Calculator_java
 This is a calculator that can perform algebraic (addition, subtraction, multiplication, division, square- and n-root, second-, third- and n-degree, factorial and double factorial, base, decimal and natural logarithm)
 and trigonometric (sine, cosine, tangent, cotangent, arcsine, arccosine, arctangent, arccotangent) operations with two numbers or with one number. 
-There are the above operations with the constants π and e (expect factorials and inverse trigonometric functions).
+There are the above operations with the constants π and e (except factorials and inverse trigonometric functions).
 Also there are functions of changing the sign and percent of the number; memory buttons (remembered number is saved in the memory field above the main field).
 
 When exiting the app, the data in the main and memory fields are saved.
